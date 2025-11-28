@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практична №2 — TypeScript інтерактивність</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-row">
+        <div class="brand">TS Demo</div>
+        <nav class="nav">
+            <a href="#hero">Головна</a>
+            <a href="#users">Користувачі</a>
+        </nav>
+        <button class="primary-btn" data-open-modal>Зв'язатися</button>
+    </div>
+</header>
+
+<main>
+    <section id="hero" class="hero-block">
+        <div class="container hero-inner">
+            <h1>Інтерактивна сторінка на TypeScript</h1>
+            <p>Модальне вікно, кнопка наверх, анімації та дані з JSONPlaceholder.</p>
+            <button class="primary-btn" data-open-modal>Відкрити форму</button>
+        </div>
+    </section>
+
+    <section id="users" class="users-block">
+        <div class="container">
+            <h2>Користувачі (jsonplaceholder.typicode.com/users)</h2>
+            <p class="subtitle">Список завантажується динамічно при завантаженні сторінки.</p>
+            <div id="users-list" class="users-grid">
+                <!-- Сюди будуть додані картки користувачів -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Модальне вікно -->
+<div id="backdrop" class="backdrop"></div>
+
+<div id="contactModal" class="modal-window">
+    <div class="modal-body">
+        <h3>Залишити заявку</h3>
+        <p>Ця форма суто демонстраційна, дані нікуди не надсилаються.</p>
+        <label class="field">
+            <span>Ваше ім'я</span>
+            <input type="text" />
+        </label>
+        <label class="field">
+            <span>Email</span>
+            <input type="email" />
+        </label>
+        <button class="primary-btn" data-close-modal>Закрити</button>
+    </div>
+</div>
+
+<button id="backToTop" class="to-top-btn">⬆</button>
+
+<script type="module" src="./dist/app.js"></script>
+</body>
+</html>
